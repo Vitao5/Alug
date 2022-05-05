@@ -1,3 +1,4 @@
+import { ToolbarComponent } from './toolbar/toolbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -6,9 +7,11 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule
   ],
-  exports:[
-    
+  declarations: [
+    ToolbarComponent
   ],
-  declarations: []
+  exports:[
+    ToolbarComponent
+  ],
 })
 export class ComponentsModule { }

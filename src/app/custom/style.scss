@@ -1,1 +1,8 @@
-@import './variables.scss'
+@import './variables.scss';
+
+/// Theme base
+body{
+    background-color: $bg-default;
+}
+
+// End theme base
