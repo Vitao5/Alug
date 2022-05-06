@@ -1,11 +1,19 @@
-// @import "bootstrap/scss/functions";
-
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
 //colors theme
 $bg-default: #FFFFFF;
 $bg-toolbar: rgb(181, 181, 194);
 $bg-footer: blue;
 
-$primary: #6C63FF;
-$secondary: #F1F1F1;
-$placeholder: #9B95FF;
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136,
+  "custom-color": #900
+);
+
+
+// $primary: #FF385C;
+// $secondary: #454545;
+// $white: #FFFFFF
+
