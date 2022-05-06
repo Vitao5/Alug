@@ -1,0 +1,13 @@
+.card-product {
+  width: 24.125rem;
+  height: 32rem;
+  border-radius: 1rem;
+
+  &__img {
+    height: 20.625rem;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+}
