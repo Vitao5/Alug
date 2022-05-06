@@ -1,5 +1,7 @@
 @import 'variables';
 
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
 /// Theme base
 body{
     background-color: $bg-default;

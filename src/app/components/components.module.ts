@@ -1,3 +1,4 @@
+import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { NgModule } from '@angular/core';
@@ -10,11 +11,13 @@ import { CommonModule } from '@angular/common';
   ],
   declarations: [
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    CardComponent
   ],
   exports:[
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    CardComponent
   ],
 })
 export class ComponentsModule { }
