@@ -2,9 +2,13 @@
   max-width: 24.125rem;
   min-height: 32rem;
   border-radius: 1rem;
+  margin-right: 1.25rem;
+  margin-bottom: 1.25rem;
+
 
   &__header {
     height: 20.625rem;
+    width: 100%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
@@ -45,7 +49,7 @@
 
 .btn-product {
   background: white;
-  width: 9.375rem;
+  width: 9.0625rem;
   font-size: 1.5rem;
   border-radius: 1rem;
 }
