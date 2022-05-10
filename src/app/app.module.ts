@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {  HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     ViewModule,
     AppRoutingModule,
+    NgxSliderModule,
     HttpClientModule
   ],
   providers: [],
