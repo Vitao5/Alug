@@ -5,11 +5,14 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    RouterModule
+    RouterModule,
+    CarouselModule.forRoot()
   ],
   declarations: [
     ToolbarComponent,
