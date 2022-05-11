@@ -6,7 +6,7 @@
         {{ item.type }}
       </span>
 
-      <carousel class=" ">
+      <carousel [interval]="0">
         <slide  *ngFor="let item of item.photo" class="">
           <img [src]="item" alt="first slide" class=" card-product__img" >
         </slide>
@@ -21,14 +21,14 @@
       <div class="divider bg-white mb-2"></div>
 
       <div class="row align-items-center ">
-        <ul class="card-product__icons list-unstyled col row row-cols-2 ">
+        <ul class="card-product__icons list-unstyled col row row-cols-2 justify-content-baseline ">
           <li class="col" aria-label="Quartos">
             <span>
               <img src="../../../assets/img/icons/local_hotel.svg" alt="Ícone cama">
             </span>
             {{ item.rooms }}
           </li>
-          <li class="col" aria-label="Banheiros">
+          <li class="col p-0" aria-label="Banheiros">
             <span>
               <img src="../../../assets/img/icons/bathtub.svg" alt="Ícone banheira ">
             </span>
@@ -41,14 +41,14 @@
             </span>
             {{ item.garage }}
           </li>
-          <li class="col" aria-label="Área em metros">
+          <li class="col p-0" aria-label="Área em metros">
             <span>
               <img src="../../../assets/img/icons/grid_on.svg" alt="Ícone grid indicativo de area">
             </span>
-            {{ item.area }}
+            {{ item.area }}m²
           </li>
         </ul>
-        <div class="col d-flex justify-content-end">
+        <div class="col d-flex justify-content-center p-0" >
           <a [routerLink]="['']" class="text-decoration-none fw-bold btn btn-product py-2 text-primary"> Detalhes </a>
         </div>
       </div>
