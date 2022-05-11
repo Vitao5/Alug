@@ -144,3 +144,28 @@ body{
 .ngx-slider-pointer:hover:after {
  visibility: hidden !important;
 }
+
+.footer {
+  min-height: 27.875rem;
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__divider {
+    width: 20%;
+    height: 4px;
+  }
+}
+
+.news__header {
+  width: 4.0625rem;
+  height: 4.0625rem;
+}
+.news__img {
+  width: 100%;
+  height: 100%;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+}
