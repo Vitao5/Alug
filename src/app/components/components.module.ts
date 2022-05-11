@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -18,7 +19,7 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     FormsModule,
     RouterModule,
-    // CarouselModule.forRoot()
+    CarouselModule.forRoot()
   ],
   declarations: [
     ToolbarComponent,
