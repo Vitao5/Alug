@@ -1,18 +1,15 @@
 <div class="row ">
 
-  <div class="card-product bg-primary p-0 " *ngFor="let item of card">
+  <div class="card-product bg-primary p-0 " *ngFor="let item of card" >
     <div class="card-product__header bg-info ">
-      <span class="text-white position-absolute card-product__tag bg-primary p-2 text-uppercase text-center ">
+      <span class="text-white position-absolute card-product__tag bg-primary p-2 text-uppercase text-center " >
         {{ item.type }}
       </span>
       <!-- <img [src]="item.photo" [alt]="item.photoDescription" class="img-fluid card-product__img"> -->
 
       <carousel [noPause]="false" [pauseOnFocus]="true">
-        <slide class="card-product__carroulsel">
-          <img [src]="item.photo" [alt]="item.photoDescription" class="card-product__img img-fluid">
-        </slide>
-        <slide>
-          <img src="../../../assets/img/photo-1570129477492-45c003edd2be.avif" alt="first slide"  class="card-product__img">
+        <slide class="card-product__carroulsel" *ngFor="let photo of photos">
+          <img [src]="photo" [alt]="photo.description" class="card-product__img img-fluid">
         </slide>
 
       </carousel>

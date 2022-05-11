@@ -21,6 +21,10 @@ export class CardService {
     return this.httpClient.get<Card>(`${API}/property`)
       .pipe(map((res: any) => { return res; }));
   }
+  public getPhoto(id:number) {
+    return this.httpClient.get(`${API}/photos?owner=${id}`)
+      .pipe(map((res: any) => { return res; }));
+  }
 
 
 }
