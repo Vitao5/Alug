@@ -2,8 +2,8 @@
   max-width: 24.125rem;
   min-height: 32rem;
   border-radius: 1rem;
-  margin-right: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
 
 
   &__header {
@@ -44,6 +44,7 @@
     font-size: 1.25rem;
     border-top-left-radius: 1rem 1rem;
     border-bottom-right-radius:  1rem 1rem;
+    z-index: 2;
   }
 }
 
