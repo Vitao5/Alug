@@ -2,7 +2,6 @@ import { lastValueFrom } from 'rxjs';
 import { CardService } from 'src/app/services/card.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Card } from 'src/app/services/card';
-import { News } from './news';
 
 @Component({
   selector: 'footer',
@@ -23,8 +22,6 @@ export class FooterComponent implements OnInit {
 
   async getCard() {
     const data$ = await lastValueFrom(this.cardService.getCard());
-    // this.card = data$
-
 
     this.news = {
       firstNew: data$.slice(-1)[0],

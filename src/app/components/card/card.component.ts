@@ -14,19 +14,21 @@ import { Photo } from 'src/app/services/photo';
 })
 export class CardComponent implements OnInit {
 
-  @Input() card!: Card[]
-  @Input() photos!: Photo[]
+  @Input() card!: Card[];
+  @Input() cardLength!: number;
+  @Input() p: number = 1;
 
   constructor(
     private cardService: CardService
   ) { }
 
   ngOnInit(): void {
-    this.getAllCards()
+    this.getAllCards();
   }
 
   async getAllCards() {
-    const data$ = await lastValueFrom(this.cardService.getCard())
-    this.card = data$
+    const data$ = await lastValueFrom(this.cardService.getCard());
+    this.card = data$;
+    this.cardLength = data$.length;
   }
 }
