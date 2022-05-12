@@ -145,6 +145,22 @@ body{
  visibility: hidden !important;
 }
 
+.ngx-pagination {
+  padding-left: 0px !important;
+  margin-top: 20px !important;
+}
+.ngx-pagination .current, .btn-info {
+  background: $primary !important;
+  border: transparent !important;
+  border-radius: 1rem !important;
+  font-size: 1rem !important;
+}
+
+.ngx-pagination .current:hover {
+  background: #8f0909 !important;
+  border-radius: 1rem !important;
+  border: transparent !important;
+}
 .footer {
   min-height: 27.875rem;
   &__title {
