@@ -31,7 +31,6 @@ export class FooterComponent implements OnInit {
       secondNew: data$.slice(-2)[0],
       lastNew: data$.slice(-3)[0]
     }
-    console.log(data$.slice(-2)[0]);
 
 
   }

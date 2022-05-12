@@ -8,40 +8,37 @@
         <form class="row" autocomplete="off">
           <div class="d-flex justify-content-between pt-4">
             <label>
-              <input type="radio" class="radio" name="example" />
+              <input type="radio" class="radio" name="example" value="Compra" />
              Compra
             </label>
             <label>
-              <input type="radio" class="radio" name="example" />
+              <input type="radio" class="radio" name="example" value="Aluguel"/>
              Aluguel
             </label>
             <label>
-              <input type="radio" class="radio" name="example" />
+              <input type="radio" class="radio" name="example" value="" />
               Todos
             </label>
           </div>
           <div class="col-12 col-lg-12 mb-3">
             <label class="">Cidade</label>
             <select class="chevron-down form-control">
-              <option disabled selected hidden value="undefined">
-                Selecione
-              </option>
+              <option disabled selected hidden value="undefined">Selecione</option>
+              <option *ngFor="let item of dataFilter.cityOperation">{{item}}</option>
             </select>
           </div>
           <div class="col-12 col-lg-12">
             <label class="">Tipo de Propriedade</label>
             <select class="chevron-down form-control">
-              <option disabled selected hidden value="undefined">
-                Selecione
-              </option>
+              <option disabled selected hidden value="undefined"> Selecione</option>
+              <option *ngFor="let item of dataFilter.typeImmobile">{{item}}</option>
             </select>
           </div>
           <div class="col-12 col-lg-12 my-3">
             <label class="">Quartos</label>
             <select class="chevron-down form-control">
-              <option disabled selected hidden value="undefined">
-                Selecione
-              </option>
+              <option disabled selected hidden value="undefined">Selecione </option>
+              <option *ngFor="let item of dataFilter.bedroom">{{item}}</option>
             </select>
           </div>
           <div class="col-12 col-lg-12 d-flex">
@@ -49,12 +46,14 @@
               <label class="">Banheiros</label>
               <select class="chevron-down form-control">
                 <option disabled selected hidden value="undefined">Selecione</option>
+                <option *ngFor="let item of dataFilter.bathroom">{{item}}</option>
               </select>
             </div>
             <div class="col-lg-6 ps-3">
               <label class="">Garagem</label>
               <select class="chevron-down form-control">
                 <option disabled selected hidden value="undefined">Selecione</option>
+                <option *ngFor="let item of dataFilter.garage">{{item}}</option>
               </select>
             </div>
           </div>

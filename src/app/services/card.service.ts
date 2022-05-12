@@ -26,5 +26,8 @@ export class CardService {
       .pipe(map((res: any) => { return res; }));
   }
 
-
+  public dataFilter() {
+    return this.httpClient.get(`${API}/dataFilter`)
+      .pipe(map((res: any) => { return res; }));
+  }
 }

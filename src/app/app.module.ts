@@ -6,6 +6,7 @@ import {  HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     ViewModule,
     AppRoutingModule,
     NgxSliderModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
