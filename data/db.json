@@ -20,7 +20,7 @@
       "id": 2,
       "type": "Compra",
       "address": "Monte Claro",
-      "city": "Patrocinio",
+      "city": "Patrocínio",
       "price": 90000,
       "area": 34,
       "rooms": 4,
@@ -69,6 +69,14 @@
       "photoDescription": "Linda casa com jardim na frente 3"
     }
 
-  ]
+  ],
 
+
+  "dataFilter": {
+    "cityOperation":["Araxá","Tapira", "Patrocínio", "Pratinha"],
+    "garage":["1", "2"," 3", "4 ou mais"],
+    "bathroom":["1", "2"," 3 ou mais"],
+    "bedroom":["1", "2"," 3 ou mais"],
+    "typeImmobile":["Comercial", "Apartamento", "Terreno", "Casa"] 
+  }
 }
