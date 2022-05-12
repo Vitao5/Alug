@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { lastValueFrom } from 'rxjs';
 import { CardService } from 'src/app/services/card.service';
-import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-filter',
@@ -11,6 +10,7 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class FilterComponent implements OnInit {
   dataFilter: any = []
+  filterForm: FormGroup | any
   model: any = {}
   value: number = 70;
   options: Options = {
@@ -19,16 +19,27 @@ export class FilterComponent implements OnInit {
   };
   constructor(
     private formbuilder: FormBuilder,
-    private storageService: StorageService,
     private cardService: CardService
   ) { }
   ngOnInit(): void {
-    this.getCity()
+    this.filterForm = this.formbuilder.group({
+      tipoOpercao: [''],
+      tipoPropriedade: [''],
+      cidade: [''],
+      quartos: [''],
+      banheiros: [''],
+      valor: ['']
+    })
+    this.getDataFilter()
   }
 
-  async getCity() {
+  async getDataFilter() {
     const data$ = await lastValueFrom(this.cardService.dataFilter())
      this.dataFilter = data$ 
+  }
+
+  filtrar(){
+    console.log(this.model)
   }
 }
 

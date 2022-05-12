@@ -138,10 +138,8 @@
     }
 
   ],
-
-
   "dataFilter": {
-    "cityOperation":["Araxá","Tapira", "Patrocínio", "Pratinha"],
+    "cityOperation":["Araxá","Tapira", "Patrocínio"],
     "garage":["1", "2"," 3", "4 ou mais"],
     "bathroom":["1", "2"," 3 ou mais"],
     "bedroom":["1", "2"," 3 ou mais"],
