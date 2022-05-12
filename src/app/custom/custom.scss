@@ -9,9 +9,6 @@ body{
 
 // End theme base
 
-.main-content {
-  width: 1200px;
-}
 
 .bg-toolbar{
     background-color: $bg-toolbar;
@@ -184,4 +181,8 @@ body{
 .divider {
   width: 100%;
   height: 1px;
+}
+
+.container-bg {
+  width: 1200px;
 }
