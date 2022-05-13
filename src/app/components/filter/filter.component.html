@@ -7,32 +7,26 @@
       <div class="col-lg-12 col-12">
       <form [formControlName]="filterForm" class="row" autocomplete="off">
           <div class="d-flex justify-content-between py-3 ">
-            <label>
-              <input type="radio" class="radio" name="example" value="Compra" />
-             Compra
-            </label>
-            <label>
-              <input type="radio" class="radio" name="example" value="Aluguel"/>
-             Aluguel
-            </label>
-            <label>
-              <input type="radio" class="radio" name="example" value="" />
-              Todos
-            </label>
+              <input type="radio" id="test1" name="radio-group" checked>
+              <label for="test1" class="text-white">Aluguel</label>
+              <input type="radio" id="test2"  name="radio-group">
+              <label for="test2" class="text-white">Compra</label>
+              <input type="radio" id="test3" name="radio-group">
+              <label for="test3" class="text-white">Todos</label>
           </div>
-          <div class="col-12 col-lg-12 mb-3">
-            <label class="">Cidade</label>
-            <select formControlName="cidade" [(ngModel)]="model.cidade" class="chevron-down form-control">
+          <div class="form-group mb-2 col-12 col-lg-12">
+            <select formControlName="cidade" [(ngModel)]="model.cidade" class="form-control">
               <option disabled selected hidden value="undefined">Selecione</option>
-              <option *ngFor="let item of dataFilter.cityOperation">{{item}}</option>
+              <option *ngFor="let item of dataFilter.cityOperation" [value]="item">{{item}}</option>
             </select>
+            <label>Cidade</label>
           </div>
-          <div class="col-12 col-lg-12">
-            <label class="">Tipo de Propriedade</label>
+          <div class="form-group mb-2 col-12 col-lg-12">
             <select formControlName="tipoPropriedade" [(ngModel)]="model.tipoPropriedade" class="chevron-down form-control">
               <option disabled selected hidden value="undefined"> Selecione</option>
-              <option *ngFor="let item of dataFilter.typeImmobile">{{item}}</option>
+              <option *ngFor="let item of dataFilter.typeImmobile" [value]="item">{{item}}</option>
             </select>
+            <label >Tipo de Propriedade</label>
           </div>
           <div class="col-12 col-lg-12 my-3">
             <label class="">Quartos</label>
@@ -58,15 +52,12 @@
             </div>
           </div>
           <div class="col-lg-12 mt-3">
-            <p class="text-center fs-5" formControlName="valor" [(ngModel)]="model.valor">{{value | currency:'BRL'}}</p>
             <div class="d-flex justify-content-between">
-              <p>R$ 600.00</p>
-              <p>R$ 200,000.00</p>
+              <p class="fs-5 pt-3"formControlName="valor" [(ngModel)]="model.value">{{value | currency:'BRL'}}</p>
+              <p class="fs-5 pt-3" [(ngModel)]="model.highValue">{{highValue | currency:'BRL'}}</p>
             </div>
-            <ngx-slider [(value)]="value" [options]="options"></ngx-slider>
-          </div>
-          <div class="col-lg-12 d-flex justify-content-between">
-         
+            <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>         </div>
+          <div class="col-lg-12 d-flex justify-content-between"> 
             <button class=" btn col-lg-12 btn-filter mt-4 mb-1" type="button" (click)="filtrar()">
               Filtrar
             </button>

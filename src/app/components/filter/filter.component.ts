@@ -12,10 +12,11 @@ export class FilterComponent implements OnInit {
   dataFilter: any = []
   filterForm: FormGroup | any
   model: any = {}
-  value: number = 70;
+  value: number = 600;
+  highValue: number = 5000;
   options: Options = {
     floor: 600,
-    ceil: 200000
+    ceil: 5000
   };
   constructor(
     private formbuilder: FormBuilder,

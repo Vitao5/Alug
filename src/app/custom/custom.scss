@@ -27,8 +27,6 @@ body{
 .bg-toolbar{
     background-color: $bg-toolbar;
 }
-
-
 .bg-footer{
     background-color: $bg-footer;
 }
@@ -43,8 +41,6 @@ body{
   min-height: 32rem;
   background-color: $secondary;
   color: $white;
-  
-
 }
 
 .btn-filter{
@@ -61,14 +57,20 @@ body{
   background-color: $white;
 }
 
-.ngx-slider-limit, .ngx-slider-model-value{
+.ngx-slider-limit,
+.ngx-slider-model-value, 
+.ngx-slider-model-high,
+.ngx-slider .ngx-slider-bubble{
   display: none !important;
 }
 
-.ngx-slider-bar{
+.ngx-slider .ngx-slider-selection{
   background-color: $primary !important;
 }
 
+.ngx-slider .ngx-slider-pointer:after{
+  background: none !important;
+}
 .ngx-slider .ngx-slider-pointer {
   width: 1.5rem !important;
   height: 1.5rem !important;
@@ -77,9 +79,7 @@ body{
   border-radius: 2rem !important;
 }
 
-.ngx-slider-pointer:hover:after {
- visibility: hidden !important;
-}
+
 
 .ngx-pagination {
   padding-left: 0px !important;
@@ -124,4 +124,126 @@ body{
 
 .container-bg {
   width: 1200px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 3px solid $white;
+    border-radius: 100%;
+    background: $secondary;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: $white;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+// Filtro label
+.form-group {
+  & > label {
+    min-width: 99%;
+    bottom: 34px;
+    position: relative;
+    background-color: $secondary;
+    padding: 0px 6px;
+    font-size: 1.1em;
+    transition: 0.2s;
+    pointer-events: none;
+    margin: 0 5px;
+    border-radius: 0;
+  }
+  .input-icon {
+    padding-left: 20px;
+    background: url(../../assets/svg/chevron-down.svg);
+    position: absolute !important;
+    z-index: 1;
+    right: 1rem;
+    margin: -1.8rem auto;
+    width: 1.5rem;
+    height: 100%;
+  }
+}
+.form-control {
+  border: none;
+  border-bottom: 1px solid white;
+  border-radius: 0;
+  background-color: $secondary;
+  color: white;
+  margin-top: 30px;
+  &.ng-touched {
+    border-color: blue;
+    & ~ label {
+      font-size: 0.9em;
+      bottom: 56px;
+    }
+    &:focus {
+      border-color: white;
+      box-shadow: none;
+    }
+  }
+  &.ng-invalid.ng-touched {
+    background-position: right calc(1.5rem + 0.1875rem) center;
+    & ~ label {
+      color: white;
+      background-color: aquamarine;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &:focus {
+    background-color: $secondary;
+    color: white;
+    box-shadow: none;
+    & ~ label {
+      min-width: 5%;
+      bottom: 55px;
+      font-size: 0.9em;
+    }
+  }
+  &:disabled {
+    ~ {
+      label {
+        background-color: inherit;
+      }
+    }
+  }
 }
