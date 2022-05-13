@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CollapseModule } from 'ngx-bootstrap/collapse'
 
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,6 +26,7 @@ import { CardComponent } from './card/card.component';
     RouterModule,
     NgxPaginationModule,
     CarouselModule.forRoot(),
+    CollapseModule
   ],
   declarations: [
     ToolbarComponent,

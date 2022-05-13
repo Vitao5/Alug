@@ -5,8 +5,8 @@ import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
     {
-       path: '',
-       component: HomeComponent
+      path: '',
+      component: HomeComponent
     },
     {
     path: 'anunciar',
@@ -17,10 +17,10 @@ const routes: Routes = [
     component: NotFoundComponent
     },
     {
-     path: 'vendas',
-     component: NotFoundComponent
-     },
-     {
+    path: 'vendas',
+    component: NotFoundComponent
+    },
+    {
       path: 'contato',
       component: NotFoundComponent
     },
