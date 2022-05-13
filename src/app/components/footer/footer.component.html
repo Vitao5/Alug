@@ -1,3 +1,77 @@
-<div class="col-12 col-lg-12 bg-footer">
- oi
+<div class="footer bg-secondary col-12 col-lg-12 d-flex justify-content-center w-100">
+
+  <div class=" row  text-white container-bg mt-5">
+    <article class="col-12 col-md-4">
+      <h4 class=" footer__title"> Redes sociais </h4>
+      <div class="footer__divider bg-primary mt-3"></div>
+      <ul class="list-unstyled d-flex mt-3">
+        <li>
+          <a href="#">
+            <img src="../../../assets/img/icons/whatsapp.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../../assets/img/icons/Vector.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../../assets/img/icons/instagram.svg" alt="">
+          </a>
+        </li>
+      </ul>
+    </article>
+
+    <article class="col-12 col-md-4">
+      <h4 class=" footer__title"> Novidades </h4>
+      <div class="footer__divider bg-primary mt-3"></div>
+
+      <div class="d-flex align-items-center mt-3" *ngIf="news">
+        <div class="news__header me-3">
+          <img [src]="news.firstNew.photo" alt="" class="news__img">
+        </div>
+        <div>
+          <p class="m-0 p-0"> {{ news.firstNew.address }} - {{ news.firstNew.city }} </p>
+          <p>{{ news.firstNew.price | currency: 'BRL'}} </p>
+        </div>
+      </div>
+
+      <div class="divider bg-white mt-3 w-75"></div>
+
+      <div class="d-flex align-items-center mt-3" *ngIf="news">
+        <div class="news__header me-3">
+          <img [src]="news.secondNew.photo" alt="" class="news__img">
+        </div>
+        <div>
+          <p class="m-0 p-0"> {{ news.secondNew.address }} - {{ news.secondNew.city }} </p>
+          <p>{{ news.secondNew.price | currency: 'BRL'}} </p>
+        </div>
+      </div>
+
+      <div class="divider bg-white mt-3 w-75"></div>
+
+      <div class="d-flex align-items-center mt-3" *ngIf="news">
+        <div class="news__header me-3">
+          <img [src]="news.lastNew.photo" alt="" class="news__img">
+        </div>
+        <div>
+          <p class="m-0 p-0"> {{ news.lastNew.address }} - {{ news.lastNew.city }} </p>
+          <p>{{ news.lastNew.price | currency: 'BRL'}} </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="col-12 col-md-4">
+      <h4 class=" footer__title"> Contato </h4>
+      <div class="footer__divider bg-primary mt-3"></div>
+      <ul class="list-unstyled mt-3">
+        <li> Rua São sebastião Vital de oliveira, 100 - Araxá MG </li>
+        <li> 3666-6666 - 3665-6668</li>
+        <li> aluguel@gmail.com </li>
+      </ul>
+    </article>
+
+  </div>
+
 </div>

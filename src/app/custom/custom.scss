@@ -2,100 +2,126 @@
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-/// Theme base
+/// Base
 body{
     background-color: $bg-default;
 }
 
-// End theme base
+.border {
+  &-1 {
+    border-radius: 1rem !important;
+  }
+  &-2 {
+    border-radius: 2rem !important;
+  }
+  &-3 {
+    border-radius: 3rem !important;
+  }
+}
+// Base
+
+.toolbar-size{
+  height: 5rem;
+}
 
 .bg-toolbar{
     background-color: $bg-toolbar;
 }
 
+
 .bg-footer{
     background-color: $bg-footer;
 }
 
-.w {
-    &-10 {
-      width: 10% !important;
-    }
-    &-12 {
-      width: 12% !important;
-    }
+.title-filter{
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
 
-    &-15 {
-      width: 15% !important;
-    }
-
-    &-20 {
-      width: 20% !important;
-    }
-    &-30 {
-      width: 30% !important;
-    }
-
-    &-40 {
-      width: 40% !important;
-    }
-
-    &-50 {
-      width: 50% !important;
-    }
-
-    &-60 {
-      width: 60% !important;
-    }
-
-    &-70 {
-      width: 70% !important;
-    }
-
-    &-80 {
-      width: 80% !important;
-    }
-
-    &-100 {
-      width: 100% !important;
-    }
+.filter{
+  max-width: 22rem;
+  min-height: 32rem;
+  background-color: $secondary;
+  color: $white;
+  
 
 }
 
-.h {
-    &-10 {
-      height: 10% !important;
-    }
+.btn-filter{
+  color: $white;
+  background-color: $primary;
+}
 
-    &-15 {
-      height: 15% !important;
-    }
+.chevron-down{
+  position: relative;
+  background: url(../../assets/svg/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: 98%;
+  background-color: $white;
+}
 
-    &-20 {
-      height: 20% !important;
-    }
+.ngx-slider-limit, .ngx-slider-model-value{
+  display: none !important;
+}
 
-    &-30 {
-      height: 30% !important;
-    }
+.ngx-slider-bar{
+  background-color: $primary !important;
+}
 
-    &-45 {
-      height: 45% !important;
-    }
+.ngx-slider .ngx-slider-pointer {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  top: -0.7rem !important;
+  background-color: $primary !important;
+  border-radius: 2rem !important;
+}
 
-    &-60 {
-      height: 60% !important;
-    }
+.ngx-slider-pointer:hover:after {
+ visibility: hidden !important;
+}
 
-    &-70 {
-      height: 70% !important;
-    }
+.ngx-pagination {
+  padding-left: 0px !important;
+  margin-top: 20px !important;
+}
+.ngx-pagination .current, .btn-info {
+  background: $primary !important;
+  border: transparent !important;
+  border-radius: 1rem !important;
+  font-size: 1rem !important;
+}
 
-    &-80 {
-      height: 80% !important;
-    }
+.ngx-pagination .current:hover {
+  background: #8f0909 !important;
+  border-radius: 1rem !important;
+  border: transparent !important;
+}
+.footer {
+  min-height: 27.875rem;
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__divider {
+    width: 20%;
+    height: 4px;
+  }
+}
 
-    &-100 {
-      height: 100% !important;
-    }
+.news__header {
+  width: 4.0625rem;
+  height: 4.0625rem;
+}
+.news__img {
+  width: 100%;
+  height: 100%;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+}
+
+.container-bg {
+  width: 1200px;
 }

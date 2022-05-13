@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { lastValueFrom } from 'rxjs';
+import { CardService } from 'src/app/services/card.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { Card } from 'src/app/services/card';
 
 @Component({
   selector: 'footer',
@@ -6,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  @Input() card!: Card[]
+  @Input() news: any
+
+  constructor(
+    private cardService: CardService
+  ) { }
 
   ngOnInit() {
+    this.getCard();
+  }
+
+  async getCard() {
+    const data$ = await lastValueFrom(this.cardService.getCard());
+
+    this.news = {
+      firstNew: data$.slice(-1)[0],
+      secondNew: data$.slice(-2)[0],
+      lastNew: data$.slice(-3)[0]
+    }
+
+
   }
 
 }

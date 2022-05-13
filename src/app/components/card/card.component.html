@@ -1,0 +1,72 @@
+<div class="row ">
+
+  <div
+    class="card-product bg-primary p-0 "
+    *ngFor="let item of card | paginate: {
+        itemsPerPage: 4,
+        currentPage: p,
+        totalItems: cardLength
+      }
+    ">
+    <div class="card-product__header bg-info ">
+      <span class="text-white position-absolute card-product__tag bg-primary p-2 text-uppercase text-center " >
+        {{ item.type }}
+      </span>
+
+      <carousel [interval]="0">
+        <slide  *ngFor="let item of item.photo" class="">
+          <img [src]="item" alt="first slide" class=" card-product__img" >
+        </slide>
+      </carousel>
+    </div>
+
+    <div class="bg-primary text-white mx-auto card-product__content">
+
+      <h4 class="card-product__title pt-2 fw-bold mb-0"> {{ item.address }} - {{ item.city }}</h4>
+      <p class="card-product__title"> {{ item.price | currency: 'BRL'  }} </p>
+
+      <div class="divider bg-white mb-2"></div>
+
+      <div class="row align-items-center ">
+        <ul class="card-product__icons list-unstyled col row row-cols-2 justify-content-baseline ">
+          <li class="col" aria-label="Quartos">
+            <span>
+              <img src="../../../assets/img/icons/local_hotel (1).svg" alt="Ícone cama">
+            </span>
+            {{ item.rooms }}
+          </li>
+          <li class="col p-0" aria-label="Banheiros">
+            <span>
+              <img src="../../../assets/img/icons/bathtub.svg" alt="Ícone banheira ">
+            </span>
+            {{ item.bathroom }}
+          </li>
+
+          <li class="col" aria-label="Garagem">
+            <span>
+              <img src="../../../assets/img/icons/airport_shuttle.svg" alt="Ícone carro">
+            </span>
+            {{ item.garage }}
+          </li>
+          <li class="col p-0" aria-label="Área em metros">
+            <span>
+              <img src="../../../assets/img/icons/grid_on.svg" alt="Ícone grid indicativo de area">
+            </span>
+            {{ item.area }}m²
+          </li>
+        </ul>
+        <div class="col d-flex justify-content-center p-0" >
+          <a [routerLink]="['']" class="text-decoration-none fw-bold btn btn-product py-2 text-primary"> Detalhes </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<pagination-controls (pageChange)="p = $event" class="text-center mt-3"></pagination-controls>
+
+<div class="box bg-primary w-50 mt-5 mb-5">
+ teste
+</div>
+

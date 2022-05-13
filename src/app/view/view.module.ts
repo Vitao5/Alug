@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { ComponentsModule } from '../components/components.module';
 import { NgModule } from '@angular/core';
@@ -14,9 +15,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   declarations: [
     HomeComponent,
+    NotFoundComponent
   ],
   exports:[
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent
   ],
 })
 export class ViewModule { }

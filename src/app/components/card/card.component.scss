@@ -1,13 +1,64 @@
 .card-product {
-  width: 24.125rem;
-  height: 32rem;
+  max-width: 24.125rem;
+  min-height: 32rem;
   border-radius: 1rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
 
-  &__img {
+  &__header {
     height: 20.625rem;
     width: 100%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
 
+
+  &__carrousel{
+    height: 20.625rem;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  &__img {
+    height: 20.625rem;
+    width: 100%;
+    display: block;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  &__content {
+    min-height: 11.1875rem;
+    max-width: 21.25rem;
+  }
+
+  &__title {
+    font-size: 1.5625rem;
+  }
+
+  &__icons {
+    font-size: 1.125rem;
+  }
+
+  &__tag {
+    width: 8.75rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    border-top-left-radius: 1rem 1rem;
+    border-bottom-right-radius:  1rem 1rem;
+    z-index: 2;
+  }
 }
+
+
+
+.btn-product {
+  background: white;
+  width: 9.0625rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+}
+
+
