@@ -1,21 +1,19 @@
 <div class="row ">
 
-  <div
-    class="card-product bg-primary p-0 "
-    *ngFor="let item of card | paginate: {
-        itemsPerPage: 4,
+  <div class="card-product bg-primary p-0 " *ngFor="let item of card | paginate: {
+        itemsPerPage: 6,
         currentPage: p,
         totalItems: cardLength
       }
     ">
     <div class="card-product__header bg-info ">
-      <span class="text-white position-absolute card-product__tag bg-primary p-2 text-uppercase text-center " >
+      <span class="text-white position-absolute card-product__tag bg-primary p-2 text-uppercase text-center ">
         {{ item.type }}
       </span>
 
       <carousel [interval]="0">
-        <slide  *ngFor="let item of item.photo" class="">
-          <img [src]="item" alt="first slide" class=" card-product__img" >
+        <slide *ngFor="let item of item.photo" class="">
+          <img [src]="item" alt="first slide" class=" card-product__img">
         </slide>
       </carousel>
     </div>
@@ -55,7 +53,7 @@
             {{ item.area }}m²
           </li>
         </ul>
-        <div class="col d-flex justify-content-center p-0" >
+        <div class="col d-flex justify-content-center p-0">
           <a [routerLink]="['']" class="text-decoration-none fw-bold btn btn-product py-2 text-primary"> Detalhes </a>
         </div>
       </div>
@@ -66,7 +64,4 @@
 </div>
 <pagination-controls (pageChange)="p = $event" class="text-center mt-3"></pagination-controls>
 
-<div class="box bg-primary w-50 mt-5 mb-5">
- teste
-</div>
 
