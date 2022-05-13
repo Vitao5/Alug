@@ -1,28 +1,36 @@
+
+
+$min-heigh-card: 419px;
+$max-width-card: 320px;
+$heigh-card: 268px;
+$width-card: 100%;
+
+
 .card-product {
-  max-width: 24.125rem;
-  min-height: 32rem;
+  max-width: $max-width-card;
+  min-height: $min-heigh-card;
   border-radius: 1rem;
   margin-right: 0.8rem;
   margin-bottom: 0.8rem;
 
   &__header {
-    height: 20.625rem;
-    width: 100%;
+    height: $heigh-card;
+    width: $width-card;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
 
 
   &__carrousel{
-    height: 20.625rem;
-    width: 100%;
+    height: $heigh-card;
+    width: $width-card;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
 
   &__img {
-    height: 20.625rem;
-    width: 100%;
+    height: $heigh-card;
+    width: $width-card;
     display: block;
 
     border-top-left-radius: 1rem;
@@ -30,12 +38,12 @@
   }
 
   &__content {
-    min-height: 11.1875rem;
-    max-width: 21.25rem;
+    min-height: 156px;
+    max-width: 301px;
   }
 
   &__title {
-    font-size: 1.5625rem;
+    font-size: 20px;
   }
 
   &__icons {
@@ -56,9 +64,11 @@
 
 .btn-product {
   background: white;
-  width: 9.0625rem;
-  font-size: 1.5rem;
+  width: 143px;
+  font-size: 20px;
   border-radius: 1rem;
 }
+
+
 
 

@@ -135,6 +135,23 @@
         "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
       ],
       "photoDescription": "Linda casa com jardim na frente 3"
+    },
+    {
+      "id": 9,
+      "type": "Aluguel",
+      "address": "Bela vista",
+      "city": "Araxa",
+      "price": 500,
+      "area": 300,
+      "rooms": 5,
+      "bathroom": 3,
+      "garage": 3,
+      "photo":[
+        "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        "https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      ],
+      "photoDescription": "Linda casa com jardim na frente 3"
     }
 
   ],
@@ -143,6 +160,6 @@
     "garage":["1", "2"," 3", "4 ou mais"],
     "bathroom":["1", "2"," 3 ou mais"],
     "bedroom":["1", "2"," 3 ou mais"],
-    "typeImmobile":["Comercial", "Apartamento", "Terreno", "Casa"] 
+    "typeImmobile":["Comercial", "Apartamento", "Terreno", "Casa"]
   }
 }
