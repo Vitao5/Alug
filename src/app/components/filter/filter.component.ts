@@ -29,6 +29,7 @@ export class FilterComponent implements OnInit {
       cidade: [''],
       quartos: [''],
       banheiros: [''],
+      garagem: [''],
       valor: ['']
     })
     this.getDataFilter()

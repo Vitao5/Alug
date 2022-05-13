@@ -5,56 +5,60 @@
     </div>
     <div class="d-flex flex-lg-row flex-column-reverse px-4 py-4">
       <div class="col-lg-12 col-12">
-      <form [formControlName]="filterForm" class="row" autocomplete="off">
+      <form [formGroup]="filterForm" class="row" autocomplete="off">
           <div class="d-flex justify-content-between py-3 ">
-              <input type="radio" id="Aluguel" name="radio-group" checked>
+              <input type="radio" id="Aluguel" name="radio-group"
+               [(ngModel)]="model.tipoOperacao"  value="Aluguel">
               <label for="Aluguel" class="text-white">Aluguel</label>
-              <input type="radio" id="Compra"  name="radio-group">
+              <input type="radio" id="Compra"  name="radio-group" 
+              [(ngModel)]="model.tipoOperacao" value="Compra">
               <label for="Compra" class="text-white">Compra</label>
-              <input type="radio" id="test3" name="radio-group">
+              <input type="radio" id="Todos" name="radio-group" 
+              [(ngModel)]="model.tipoOperacao" value="" checked>
               <label for="Todos" class="text-white">Todos</label>
           </div>
-          <div class="form-group mb-2 col-12 col-lg-12">
-            <select formControlName="cidade" [(ngModel)]="model.cidade" class="form-control">
-              <option disabled selected hidden value="undefined">Selecione</option>
-              <option *ngFor="let item of dataFilter.cityOperation" [value]="item">{{item}}</option>
-            </select>
-            <label>Cidade</label>
-          </div>
-          <div class="form-group  col-12 col-lg-12">
-            <select formControlName="tipoPropriedade" [(ngModel)]="model.tipoPropriedade" class="chevron-down form-control">
-              <option disabled selected hidden value="undefined"> Selecione</option>
-              <option *ngFor="let item of dataFilter.typeImmobile" [value]="item">{{item}}</option>
-            </select>
-            <label >Tipo de Propriedade</label>
-          </div>
-          <div class="form-group col-12 col-lg-12">
-            <select formControlName="quartos" [(ngModel)]="model.quartos" class="chevron-down form-control">
-              <option disabled selected hidden value="undefined">Selecione </option>
-              <option *ngFor="let item of dataFilter.bedroom">{{item}}</option>
-            </select>
-            <label >Quartos</label>
-          </div>
-          <div class=" col-12 col-lg-12 d-flex">
-            <div class="col-lg-6 form-group">
-              <select formControlName="banheiros" [(ngModel)]="model.banheiros" class="chevron-down form-control">
+            <div class="form-group mb-2 col-12 col-lg-12 mt-4">
+              <select formControlName="cidade" [(ngModel)]="model.cidade" class="form-control chevron-down">
                 <option disabled selected hidden value="undefined">Selecione</option>
-                <option *ngFor="let item of dataFilter.bathroom">{{item}}</option>
+                <option *ngFor="let item of dataFilter.cityOperation" [value]="item">{{item}}</option>
               </select>
-              <label>Banheiros</label>
+              <label>Cidade</label>
             </div>
-            <div class="col-lg-6 ps-3 form-group">
-              <select formControlName="garagem" [(ngModel)]="model.garagem" class="chevron-down form-control" >
-                <option disabled selected hidden value="undefined">Selecione</option>
-                <option *ngFor="let item of dataFilter.garage">{{item}}</option>
+            <div class="form-group  col-12 col-lg-12">
+              <select formControlName="tipoPropriedade" [(ngModel)]="model.tipoPropriedade" class="chevron-down form-control">
+                <option disabled selected hidden value="undefined"> Selecione</option>
+                <option *ngFor="let item of dataFilter.typeImmobile" [value]="item">{{item}}</option>
               </select>
-              <label>Garagem</label>
+              <label >Tipo de Propriedade</label>
             </div>
-          </div>
+            <div class="form-group col-12 col-lg-12">
+              <select formControlName="quartos" [(ngModel)]="model.quartos" class="chevron-down form-control">
+                <option disabled selected hidden value="undefined">Selecione </option>
+                <option *ngFor="let item of dataFilter.bedroom">{{item}}</option>
+              </select>
+              <label >Quartos</label>
+            </div>
+            <div class=" col-12 col-lg-12 d-flex">
+              <div class="col-lg-6 form-group">
+                <select formControlName="banheiros" [(ngModel)]="model.banheiros" class="chevron-down form-control">
+                  <option disabled selected hidden value="undefined">Selecione</option>
+                  <option *ngFor="let item of dataFilter.bathroom">{{item}}</option>
+                </select>
+                <label>Banheiros</label>
+              </div>
+              <div class="col-lg-6 ps-3 form-group">
+                <select formControlName="garagem" [(ngModel)]="model.garagem" class="chevron-down form-control" >
+                  <option disabled selected hidden value="undefined">Selecione</option>
+                  <option *ngFor="let item of dataFilter.garage">{{item}}</option>
+                </select>
+                <label>Garagem</label>
+              </div>
+            </div>
+       
           <div class="col-lg-12 mt-3">
             <div class="d-flex justify-content-between">
-              <p class="fs-5 pt-3"formControlName="valor" [(ngModel)]="model.value">{{value | currency:'BRL'}}</p>
-              <p class="fs-5 pt-3" [(ngModel)]="model.highValue">{{highValue | currency:'BRL'}}</p>
+              <span class="fs-5 pt-3" formControlName="valor" [(ngModel)]="model.value">{{value | currency:'BRL'}}</span>
+              <span class="fs-5 pt-3" [(ngModel)]="model.highValue">{{highValue | currency:'BRL'}}</span>
             </div>
             <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>         </div>
           <div class="col-lg-12 d-flex justify-content-between"> 
