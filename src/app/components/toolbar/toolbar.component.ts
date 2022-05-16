@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-  isCollapsed = false;
-
-  mobile: boolean = false;
+  isCollapse: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
-    if(window.screen.width >= 1023) {
-      this.mobile = true;
-    }
   }
 
+  toggleButton() {
+    this.isCollapse = !this.isCollapse;
+    console.log(this.isCollapse);
+    
+  }
 }
