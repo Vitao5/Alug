@@ -1,12 +1,12 @@
 <nav class="navbar navbar-light bg-secondary fixed-top">
    <h1 class="text-white-50 ms-3">Logo do Site</h1>
-      <div class="bg-secondary py-2">
-         <div class="d-lg-flex" [ngClass]="{'posicao': isCollapse}">
+      <div class="bg-secondary">
+         <div class="d-lg-flex flex-lg-row" [ngClass]="{'button-active': isCollapse, 'd-none': !isCollapse}">
             <a routerLink="" routerLinkActive="active-border pb-0" [routerLinkActiveOptions]="{exact: true}" class="nav-link fs-5 text-white">Início</a>
             <a routerLink="/anunciar" routerLinkActive="active-border pb-0" class="nav-link fs-5 text-white" >Anunciar</a>
             <a routerLink="/locacao" routerLinkActive="active-border pb-0" class="nav-link fs-5 text-white" >Locação</a>
             <a routerLink="/vendas" routerLinkActive="active-border pb-0" class="nav-link fs-5 text-white" >Vendas</a>
-            <a routerLink="/ contato" routerLinkActive="active-border pb-0" class="nav-link fs-5 text-white" >Contato</a>
+            <a routerLink="/contato" routerLinkActive="active-border pb-0" class="nav-link fs-5 text-white" >Contato</a>
          </div>
       </div>
 

@@ -14,8 +14,6 @@ export class ToolbarComponent implements OnInit {
   }
 
   toggleButton() {
-    this.isCollapse = !this.isCollapse;
-    console.log(this.isCollapse);
-    
+    this.isCollapse = !this.isCollapse;    
   }
 }
