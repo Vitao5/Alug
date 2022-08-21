@@ -1,6 +1,6 @@
 # Alug
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Projeto criado afim de entreterimento e educação.  
 
 ## Instalando Módulos
 
@@ -14,3 +14,5 @@ Execute o comando ng serve --open para executar
 
 Acesse a rota `http://localhost:4200/#/home` e realize todas as ações disponíveis 
 
+## Angular Version
+Versão 13.3.0.
